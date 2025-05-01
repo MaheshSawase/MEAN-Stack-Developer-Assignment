@@ -1,0 +1,37 @@
+
+
+    <div class="container mt-2 ">
+      <div class="row ">
+        <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+
+        <div class="col-md-4 mb-2">
+        <label>Title:</label>
+        <input class="form-control" formControlName="title" name="title" type="text" required />
+        </div>
+
+        <div class="col-md-4 mb-2">
+        <label>Description:</label>
+        <textarea class="form-control" formControlName="description" name="description" required></textarea>
+        </div>
+
+        <div class="col-md-4 mb-2">
+          <label>Due Date:</label>
+          <input class="form-control" formControlName="dueDate" name="dueDate" type="date" required />
+        </div>
+
+        <div class="col-md-4 mb-2">
+          <label>Status:</label>
+          <select class="form-control" formControlName="status" name="status" required>
+            <option value="Pending">Pending</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+          </select>
+        </div>
+
+        <div class="col-md-4 text-center">
+          <button type="submit" class="btn btn-success">Update Task</button>
+        </div>
+
+        </form>
+      </div>
+    </div>

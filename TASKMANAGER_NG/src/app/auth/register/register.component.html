@@ -1,0 +1,37 @@
+<!-- register.component.html -->
+
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <div class="container mt-2">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card p-2">
+          <h3 class="text-center mb-4">Register</h3>
+          <div class="mb-2">
+            <label  class="form-label text-nowrap">User Name:</label>
+            <input class="form-control" formControlName="uName"/>
+          </div>
+          <div class="mb-2">
+            <label  class="form-label">Mobile:</label>
+            <input  class="form-control" formControlName="mobile"/>
+          </div>
+          <div class="mb-2">
+            <label  class="form-label">Email:</label>
+            <input  class="form-control" formControlName="email"/>
+          </div>
+          <div class="mb-2">
+            <label class="form-label">Password:</label>
+            <input  class="form-control" formControlName="password"/>
+          </div>
+          <div class="mb-2">
+            <label class="form-label">Address:</label>
+            <input  class="form-control" formControlName="address"/>
+          </div>
+          <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary w-10">Register</button>
+          </div>
+          <a class="text-center" routerLink="/login">Already have an account? Login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
